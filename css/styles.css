@@ -114,6 +114,21 @@ html {
   color: black;
 }
 
+.page-search-link:hover {
+  background-color: black;
+  color: #FFFFFF;
+}
+
+.page-search-link:active {
+  background-color: black;
+  color: #FFFFFF;
+  opacity: 30%;
+}
+
+.page-search-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
 .header-menu {
   display: flex;
   margin-top: 30px;
@@ -153,11 +168,13 @@ html {
   text-transform: uppercase;
   letter-spacing: 3px;
   position: relative;
+  cursor: pointer;
 }
 
 .catalog-menu-link img {
   position: absolute;
   top: -15px;
+  right: -80px;
 }
 
 .page-navigation-list {
@@ -304,6 +321,22 @@ html {
   width: 160px;
 }
 
+.categories-navigation-item:hover .categories-navigation-item-img-container {
+  background-color: #FFC700;
+}
+
+.categories-navigation-item:active {
+  opacity: 30%;
+}
+
+.categories-navigation-item:focus-within {
+  outline: 2px solid #AF4FFF;
+}
+
+.categories-navigation-item-img-container:focus-visible {
+
+}
+
 .categories-navigation-item a {
   text-decoration: none;
   font-size: 18px;
@@ -396,6 +429,18 @@ html {
   height: 100px;
   margin: 142px auto;
   background-color: #F0F0F0;
+}
+
+.delivery-container:hover {
+  cursor: pointer;
+}
+
+.delivery-container:hover .delivery-link {
+  background-color: #FFC700;
+}
+
+.delivery-container:active {
+  opacity: 30%;
 }
 
 .delivery-link {
@@ -806,6 +851,41 @@ html {
   display: flex;
   flex-direction: column;
   width: 360px;
+}
+
+.catalog-item-photo-container {
+  position: relative;
+}
+
+.catalog-item-button {
+  position: absolute;
+  left: 70px;
+  right: 70px;
+  top: 170px;
+  bottom: 170px;
+  text-transform: uppercase;
+  border: none;
+  background-color: #FFE17F;
+  height: 8px;
+  font-family: "Raleway", sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 7px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.catalog-item-photo-container .catalog-item-button {
+  display: none;
+}
+
+.catalog-item-photo-container:hover .catalog-item-button {
+  display: block;
+}
+
+.catalog-item-photo-container:hover img {
+  opacity: 30%;
 }
 
 .catalog-item-description {
