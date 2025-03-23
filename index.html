@@ -39,10 +39,22 @@
   </div>
 
   <section class="header-links">
-    <p class="catalog-menu-link">
+    <div class="catalog-menu-link catalog-menu-link-close" tabindex="0">
       <span>Каталог товаров</span>
-      <img src="img/buttons/plus.svg">
-    </p>
+      <div class="catalog-popup-button">
+        <span class="catalog-popup-image"></span>
+      </div>
+      <div class="catalog-popup-menu">
+        <ul class="catalog-popup-menu-list">
+          <li class="catalog-popup-menu-item"><a>Виртуальная реальность</a></li>
+          <li class="catalog-popup-menu-item"><a>Моноподы для селфи</a></li>
+          <li class="catalog-popup-menu-item"><a>Экшн-камеры</a></li>
+          <li class="catalog-popup-menu-item"><a>Фитнес-браслеты</a></li>
+          <li class="catalog-popup-menu-item"><a>Умные часы</a></li>
+          <li class="catalog-popup-menu-item"><a>Квадрокоптеры</a></li>
+        </ul>
+      </div>
+    </div>
 
     <nav class="page-navigation">
       <ul class="page-navigation-list">
@@ -300,6 +312,25 @@
 <div class="footer-background">
   <div></div>
 </div>
+
+<script>
+
+  let popupMenuIsOpen = false;
+
+  let catalogMenuElement = document.querySelector('.catalog-menu-link');
+
+  catalogMenuElement.addEventListener('click', () => {
+    if (popupMenuIsOpen) {
+      catalogMenuElement.className = 'catalog-menu-link catalog-menu-link-close';
+    } else {
+      catalogMenuElement.className = 'catalog-menu-link';
+    }
+
+    popupMenuIsOpen = !popupMenuIsOpen;
+
+  });
+
+</script>
 
 </body>
 </html>
