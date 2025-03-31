@@ -296,6 +296,10 @@ html {
   display: none;
 }
 
+.basket-list-container {
+  display: none;
+}
+
 .show-basket-content {
   position: relative;
 }
@@ -338,6 +342,60 @@ html {
 
 .basket-list-item {
   padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.basket-list-item>div {
+  display: flex;
+}
+
+.basket-list-item>div:hover {
+  opacity: 60%;
+}
+
+.basket-list-item>div:active {
+  opacity: 30%;
+}
+
+.basket-list-item>div:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.basket-list-item>div>span {
+  padding-left: 23px;
+}
+
+.basket-drop-button {
+  position: relative;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  width: 10px;
+  height: 10px;
+  margin-left: 40px;
+}
+
+.basket-drop-button::before,
+  .basket-drop-button::after {
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background-color: white;
+  content: "";
+  top: 4px;
+  right: 0;
+  z-index: 4;
+}
+
+.basket-drop-button::before {
+  transform: rotate(-45deg);
+}
+
+.basket-drop-button::after {
+  transform: rotate(45deg);
 }
 
 .basket-final-price {
@@ -356,14 +414,19 @@ html {
 }
 
 .open-basket {
+  margin: 20px;
+  text-align: center;
+}
+
+.open-basket>button {
   font-size: 18px;
   font-weight: 900;
   letter-spacing: 2px;
-  margin: 20px;
+  padding: 14px 22px;
   background-color: white;
   text-transform: uppercase;
-  text-align: center;
-  padding: 14.5px 25px;
+  border: none;
+  cursor: pointer;
 }
 
 .catalog-menu-link {

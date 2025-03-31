@@ -10,50 +10,107 @@
 <body>
 
 <header class="page-header">
-  <h1 class="visually-hidden">Device</h1>
-  <img alt="Логотип" src="img/logo.svg" class="device-logo active-text-element">
-  <div class="header-menu">
-    <p class="header-search">
-      <input id="page-search" class="page-search-input" placeholder="Текст поиска" type="text">
-      <a class="page-search-link" href="#">Найти</a>
-    </p>
-
-    <a href="#" class="login-button-container header-nav-link">
-      <img src="img/buttons/login.svg" width="13">
-      <span class="login-button" href="#">Войти</span>
+  <div class="header-container">
+    <h1 class="visually-hidden">Device</h1>
+    <a href="#" class="device-logo-link active-text-element">
+      <img alt="Логотип" src="img/logo.svg">
     </a>
+    <div class="header-menu">
+      <form class="page-search-container" action="https://echo.htmlacademy.ru/" method="get">
+        <img src="img/buttons/search.svg" width="16px" height="16px">
+        <label for="page-search" class="visually-hidden">Поиск по сайту</label>
+        <input name="search-text" id="page-search" class="page-search-input" placeholder="Поиск по сайту" type="text">
+        <button class="page-search-button" href="#">Найти</button>
+      </form>
 
-    <a href="#" class="header-nav-link">
-      <img src="img/buttons/change.svg">
-      <span>Сравнить</span>
-    </a>
-    <a href="#" class="header-nav-link">
-      <img src="img/buttons/basket.svg">
-      <span>Корзина</span>
-    </a>
+      <div class="login-container is-auth">
+        <button class="login-button-container header-nav-button active-text-element">
+          <img src="img/buttons/login.svg" width="15" height="13" alt="Иконка вход">
+          <span class="login-button" href="#">Войти</span>
+        </button>
+        <button class="login-user-container" tabindex="-1">
+          <img src="img/buttons/login.svg" width="15" height="13" alt="Иконка вход">
+          <span class="login-button" href="#">Коля петухов</span>
+        </button>
+        <button class="logout-button">Выйти</button>
+      </div>
 
+      <button href="#" class="header-nav-button active-text-element">
+        <img src="img/buttons/change.svg">
+        <span>Сравнить</span>
+      </button>
+
+      <div class="basket-section">
+        <button href="#" class="header-nav-button active-text-element with-counter">
+          <div class="basket-counter"><p>2</p></div>
+          <img src="img/buttons/basket.svg">
+          <span>Корзина</span>
+        </button>
+        <div class="basket-list-container">
+          <div class="basket-list-cursor"></div>
+          <ul class="basket-list">
+            <li class="basket-list-item">
+              <div tabindex="0">
+                <img src="/img/catalog-items/product-1-small%205.png" alt="">
+                <span>Любительская селфи-палка</span>
+              </div>
+              <button class="basket-drop-button active-text-element"></button>
+            </li>
+            <li class="basket-list-item">
+              <div tabindex="0">
+                <img src="/img/catalog-items/product-2-small.png">
+                <span>Профессиональная селфи-палка</span>
+              </div>
+              <button class="basket-drop-button active-text-element"></button>
+            </li>
+          </ul>
+          <div class="basket-final-price">
+            <span>Товаров: 2</span>
+            <span>Сумма: 2000 ₽</span>
+          </div>
+          <div class="open-basket">
+            <button class="active-text-element">Открыть корзину</button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <section class="header-links">
+      <div class="catalog-menu-link catalog-menu-link-close" tabindex="0">
+        <span>Каталог товаров</span>
+        <div class="catalog-popup-button">
+          <span class="catalog-popup-image"></span>
+        </div>
+        <div class="catalog-popup-menu">
+          <ul class="catalog-popup-menu-list">
+            <li class="catalog-popup-menu-item"><a href="#" class="active-text-element">Виртуальная реальность</a></li>
+            <li class="catalog-popup-menu-item"><a href="#" class="active-text-element">Моноподы для селфи</a></li>
+            <li class="catalog-popup-menu-item"><a href="#" class="active-text-element">Экшн-камеры</a></li>
+            <li class="catalog-popup-menu-item"><a href="#" class="active-text-element">Фитнес-браслеты</a></li>
+            <li class="catalog-popup-menu-item"><a href="#" class="active-text-element">Умные часы</a></li>
+            <li class="catalog-popup-menu-item"><a href="#" class="active-text-element">Квадрокоптеры</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <nav class="page-navigation">
+        <ul class="page-navigation-list">
+          <li class="page-navigation-item">
+            <a class="active-text-element" tabindex="0">Доставка</a>
+          </li>
+          <li class="page-navigation-item active-text-element">
+            <a class="active-text-element" tabindex="0">Гарантия</a>
+          </li>
+          <li class="page-navigation-item active-text-element">
+            <a class="active-text-element" tabindex="0">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
   </div>
-
-  <section class="header-links">
-    <p class="catalog-menu-link">
-      <span>Каталог товаров</span>
-      <img src="img/buttons/plus.svg">
-    </p>
-
-    <nav class="page-navigation">
-      <ul class="page-navigation-list">
-        <li class="page-navigation-item">
-          <a>Доставка</a>
-        </li>
-        <li class="page-navigation-item">
-          <a>Гарантия</a>
-        </li>
-        <li class="page-navigation-item">
-          <a>Контакты</a>
-        </li>
-      </ul>
-    </nav>
-  </section>
+  <div class="header-background"></div>
 </header>
 
 <main class="main-catalog">
@@ -228,6 +285,8 @@
 <div class="footer-background">
   <div></div>
 </div>
+
+<script src="main.js"></script>
 
 </body>
 </html>
