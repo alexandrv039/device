@@ -108,7 +108,6 @@
       </nav>
     </section>
   </div>
-  <div class="header-background"></div>
 </header>
 
 <main class="main-page">
@@ -118,11 +117,21 @@
     <div class="slider-background"></div>
 
     <div class="slider">
-      <ul class="slider-list">
-        <li>
-          <img alt="Квадрокоптер" src="img/slider/slider-1.png" width="560" height="560">
-        </li>
-      </ul>
+      <div class="slider-image-container">
+        <img alt="Квадрокоптер" src="img/slider/slider-1.png" width="560" height="560">
+        <div class="slider-controls">
+          <button class="slider-button slider-prev" type="button">
+            <span class="visually-hidden">Предыдущее фото</span>
+          </button>
+          <button class="slider-button slider-next" type="button">
+            <span class="visually-hidden">Следующее фото</span>
+          </button>
+        </div>
+
+      </div>
+
+      <img class="slider-number-image" src="img/slider/01.png" alt="текст 01" width="192" height="130">
+
     </div>
 
     <div class="slider-description-container">
@@ -131,16 +140,22 @@
         камеру.</p>
 
       <div class="slider-navigation">
-        <a>Подробнее</a>
+        <a class="navigation-button-with-background" tabindex="0">Подробнее</a>
         <ol class="slider-navigation-list">
-          <li class="slider-navigation-item">
-            <button></button>
+          <li>
+            <button class="slider-navigation-item slider-navigation-item-active">
+              <span class="visually-hidden">Слайд 1</span>
+            </button>
           </li>
-          <li class="slider-navigation-item">
-            <button></button>
+          <li>
+            <button class="slider-navigation-item">
+              <span class="visually-hidden">Слайд 2</span>
+            </button>
           </li>
-          <li class="slider-navigation-item">
-            <button></button>
+          <li>
+            <button class="slider-navigation-item">
+              <span class="visually-hidden">Слайд 3</span>
+            </button>
           </li>
         </ol>
       </div>
